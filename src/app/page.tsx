@@ -178,6 +178,7 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "MugoNice",
   url: "https://mugonice.com",
+  logo: "https://mugonice.com/icon.svg",
   email: "info@mugonice.com",
   telephone: ["+254704692770", "+254735779900"],
   description:

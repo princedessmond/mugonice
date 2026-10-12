@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { LogoMark } from "@/components/logo-mark";
 
 const links = [
   { href: "#services", label: "Services" },
@@ -22,7 +23,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container header-inner">
         <a className="brand" href="#home" aria-label="MugoNice home">
-          <span className="brand-mark">M</span>
+          <LogoMark className="brand-mark" />
           <span className="brand-name">
             Mugo<span>Nice</span>
           </span>

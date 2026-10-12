@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import Script from "next/script";
 import { SiteHeader } from "@/components/site-header";
+import { LogoMark } from "@/components/logo-mark";
 
 const services = [
   {
@@ -177,7 +178,8 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "MugoNice",
   url: "https://mugonice.com",
-  email: "hello@mugonice.com",
+  email: "info@mugonice.com",
+  telephone: ["+254704692770", "+254735779900"],
   description:
     "AI automation, web design, performance marketing, and brand strategy for ambitious businesses.",
   areaServed: "Worldwide",
@@ -263,7 +265,7 @@ export default function Home() {
                 <span className="sphere-ring sphere-ring--one" />
                 <span className="sphere-ring sphere-ring--two" />
                 <span className="sphere-shine" />
-                <span className="sphere-logo">M</span>
+                <LogoMark className="sphere-logo" />
               </div>
               <div className="floating-card floating-card--top">
                 <span className="floating-icon floating-icon--violet">
@@ -423,7 +425,7 @@ export default function Home() {
             <div className="difference-visual" aria-hidden="true">
               <div className="difference-grid-lines" />
               <div className="difference-orb">
-                <span>M</span>
+                <LogoMark className="difference-logo" />
               </div>
               <div className="difference-chip difference-chip--one">
                 <span>01</span> Think clearly
@@ -520,8 +522,8 @@ export default function Home() {
                 Have something more specific in mind? Tell us what you are
                 building and where you feel stuck.
               </p>
-              <a href="mailto:hello@mugonice.com">
-                hello@mugonice.com <ArrowIcon />
+              <a href="mailto:info@mugonice.com">
+                info@mugonice.com <ArrowIcon />
               </a>
             </div>
             <div className="faq-list">
@@ -554,11 +556,25 @@ export default function Home() {
             </p>
             <a
               className="button button--primary button--large"
-              href="mailto:hello@mugonice.com?subject=Project%20inquiry%20for%20MugoNice"
+              href="mailto:info@mugonice.com?subject=Project%20inquiry%20for%20MugoNice"
             >
               Start a conversation
               <ArrowIcon />
             </a>
+            <div className="contact-options" aria-label="MugoNice contact details">
+              <a href="mailto:info@mugonice.com">
+                <span>Email us</span>
+                info@mugonice.com
+              </a>
+              <a href="tel:+254704692770">
+                <span>Call us</span>
+                +254 704 692 770
+              </a>
+              <a href="tel:+254735779900">
+                <span>Alternative</span>
+                +254 735 779 900
+              </a>
+            </div>
             <span className="contact-note">
               <i />
               Open for select projects
@@ -571,15 +587,16 @@ export default function Home() {
         <div className="container">
           <div className="footer-main">
             <a className="brand brand--footer" href="#home" aria-label="MugoNice home">
-              <span className="brand-mark">M</span>
+              <LogoMark className="brand-mark" />
               <span className="brand-name">
                 Mugo<span>Nice</span>
               </span>
             </a>
-            <p>
-              Intelligent systems and standout experiences for ambitious
-              businesses.
-            </p>
+            <div className="footer-contact">
+              <a href="mailto:info@mugonice.com">info@mugonice.com</a>
+              <a href="tel:+254704692770">+254 704 692 770</a>
+              <a href="tel:+254735779900">+254 735 779 900</a>
+            </div>
             <nav aria-label="Footer navigation">
               <a href="#services">Services</a>
               <a href="#work">What we build</a>

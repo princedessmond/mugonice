@@ -180,7 +180,7 @@ const jsonLd = {
   url: "https://mugonice.com",
   logo: "https://mugonice.com/icon.svg",
   email: "info@mugonice.com",
-  telephone: ["+254704692770", "+254735779900"],
+  telephone: "+254795175988",
   description:
     "AI automation, web design, performance marketing, and brand strategy for ambitious businesses.",
   areaServed: "Worldwide",
@@ -564,16 +564,28 @@ export default function Home() {
             </a>
             <div className="contact-options" aria-label="MugoNice contact details">
               <a href="mailto:info@mugonice.com">
-                <span>Email us</span>
-                info@mugonice.com
+                <span className="contact-option-icon" aria-hidden="true">
+                  @
+                </span>
+                <span className="contact-option-copy">
+                  <small>Email us</small>
+                  <strong>info@mugonice.com</strong>
+                  <em>Send us your brief anytime</em>
+                </span>
+                <ArrowIcon />
               </a>
-              <a href="tel:+254704692770">
-                <span>Call us</span>
-                +254 704 692 770
-              </a>
-              <a href="tel:+254735779900">
-                <span>Alternative</span>
-                +254 735 779 900
+              <a href="tel:+254795175988">
+                <span className="contact-option-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7.1 3.5 9.7 7a1.5 1.5 0 0 1-.1 1.9l-1.5 1.5a14.2 14.2 0 0 0 5.5 5.5l1.5-1.5a1.5 1.5 0 0 1 1.9-.1l3.5 2.6a1.5 1.5 0 0 1 .5 1.7l-.7 2.1a2 2 0 0 1-1.9 1.3C9.3 22 2 14.7 2 5.6a2 2 0 0 1 1.3-1.9L5.4 3a1.5 1.5 0 0 1 1.7.5Z" />
+                  </svg>
+                </span>
+                <span className="contact-option-copy">
+                  <small>Call us</small>
+                  <strong>0795 175 988</strong>
+                  <em>Speak directly with our team</em>
+                </span>
+                <ArrowIcon />
               </a>
             </div>
             <span className="contact-note">
@@ -595,8 +607,7 @@ export default function Home() {
             </a>
             <div className="footer-contact">
               <a href="mailto:info@mugonice.com">info@mugonice.com</a>
-              <a href="tel:+254704692770">+254 704 692 770</a>
-              <a href="tel:+254735779900">+254 735 779 900</a>
+              <a href="tel:+254795175988">0795 175 988</a>
             </div>
             <nav aria-label="Footer navigation">
               <a href="#services">Services</a>

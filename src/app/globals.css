@@ -1662,38 +1662,114 @@ button {
 
 .contact-options {
   display: grid;
-  max-width: 790px;
-  grid-template-columns: repeat(3, 1fr);
+  max-width: 880px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
   margin: 58px auto 0;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
   text-align: left;
 }
 
 .contact-options a {
+  position: relative;
   display: flex;
-  min-height: 105px;
-  flex-direction: column;
-  justify-content: center;
-  gap: 8px;
-  padding: 22px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  color: #d8d6de;
-  font-size: 0.88rem;
-  transition: background 180ms ease;
+  min-height: 142px;
+  align-items: center;
+  gap: 18px;
+  overflow: hidden;
+  padding: 25px;
+  border: 1px solid rgba(194, 173, 255, 0.18);
+  border-radius: 18px;
+  color: #f0eef5;
+  background:
+    linear-gradient(120deg, rgba(157, 122, 255, 0.1), transparent 60%),
+    rgba(15, 15, 21, 0.82);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(14px);
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
 }
 
 .contact-options a:hover {
-  background: rgba(255, 255, 255, 0.035);
+  border-color: rgba(194, 173, 255, 0.42);
+  background:
+    linear-gradient(120deg, rgba(157, 122, 255, 0.16), transparent 65%),
+    rgba(19, 19, 27, 0.9);
+  transform: translateY(-3px);
 }
 
-.contact-options span {
-  color: #74727c;
+.contact-option-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border: 1px solid rgba(194, 173, 255, 0.24);
+  border-radius: 14px;
+  color: var(--violet-bright);
+  background: rgba(157, 122, 255, 0.1);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.15rem;
+  font-style: normal;
+  font-weight: 650;
+}
+
+.contact-option-icon svg {
+  width: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.contact-option-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-option-copy small {
+  color: var(--violet-bright);
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.58rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.contact-option-copy strong {
+  overflow: hidden;
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  font-weight: 580;
+  letter-spacing: -0.025em;
+  text-overflow: ellipsis;
+}
+
+.contact-option-copy em {
+  color: #77757f;
+  font-size: 0.71rem;
+  font-style: normal;
+}
+
+.contact-options > a > svg {
+  width: 18px;
+  flex: 0 0 18px;
+  fill: none;
+  stroke: #77757f;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  transition:
+    stroke 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-options a:hover > svg {
+  stroke: var(--violet-bright);
+  transform: translateX(3px);
 }
 
 .contact-note {
@@ -2086,7 +2162,8 @@ button {
   }
 
   .contact-options a {
-    min-height: 82px;
+    min-height: 122px;
+    padding: 20px;
   }
 
   .footer-main nav {

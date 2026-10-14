@@ -344,45 +344,55 @@ export default function Home() {
                   className={`service-card service-card--${service.accent}`}
                   key={service.title}
                 >
-                  <div className="service-top">
-                    <span className="service-number">{service.number}</span>
+                  <div className="service-card-header">
+                    <div className="service-identity">
+                      <span className="service-number">{service.number}</span>
+                      <div className="service-icon" aria-hidden="true">
+                        {service.number === "01" && (
+                          <svg viewBox="0 0 48 48">
+                            <circle cx="24" cy="24" r="7" />
+                            <path d="M24 4v8M24 36v8M4 24h8M36 24h8M9.9 9.9l5.7 5.7M32.4 32.4l5.7 5.7M38.1 9.9l-5.7 5.7M15.6 32.4l-5.7 5.7" />
+                          </svg>
+                        )}
+                        {service.number === "02" && (
+                          <svg viewBox="0 0 48 48">
+                            <rect x="5" y="8" width="38" height="32" rx="4" />
+                            <path d="M5 17h38M13 12.5h.1M19 12.5h.1M25 12.5h.1M12 25h14M12 31h24" />
+                          </svg>
+                        )}
+                        {service.number === "03" && (
+                          <svg viewBox="0 0 48 48">
+                            <path d="M7 38V26M17 38V18M27 38V23M37 38V9" />
+                            <path d="m7 18 10-6 10 3 10-9" />
+                          </svg>
+                        )}
+                        {service.number === "04" && (
+                          <svg viewBox="0 0 48 48">
+                            <path d="M24 5 42 15v18L24 43 6 33V15L24 5Z" />
+                            <path d="m6 15 18 10 18-10M24 25v18" />
+                          </svg>
+                        )}
+                      </div>
+                    </div>
                     <span className="service-arrow">
                       <ArrowIcon />
                     </span>
                   </div>
-                  <div className="service-icon" aria-hidden="true">
-                    {service.number === "01" && (
-                      <svg viewBox="0 0 48 48">
-                        <circle cx="24" cy="24" r="7" />
-                        <path d="M24 4v8M24 36v8M4 24h8M36 24h8M9.9 9.9l5.7 5.7M32.4 32.4l5.7 5.7M38.1 9.9l-5.7 5.7M15.6 32.4l-5.7 5.7" />
-                      </svg>
-                    )}
-                    {service.number === "02" && (
-                      <svg viewBox="0 0 48 48">
-                        <rect x="5" y="8" width="38" height="32" rx="4" />
-                        <path d="M5 17h38M13 12.5h.1M19 12.5h.1M25 12.5h.1M12 25h14M12 31h24" />
-                      </svg>
-                    )}
-                    {service.number === "03" && (
-                      <svg viewBox="0 0 48 48">
-                        <path d="M7 38V26M17 38V18M27 38V23M37 38V9" />
-                        <path d="m7 18 10-6 10 3 10-9" />
-                      </svg>
-                    )}
-                    {service.number === "04" && (
-                      <svg viewBox="0 0 48 48">
-                        <path d="M24 5 42 15v18L24 43 6 33V15L24 5Z" />
-                        <path d="m6 15 18 10 18-10M24 25v18" />
-                      </svg>
-                    )}
+                  <div className="service-card-body">
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
                   </div>
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                  <ul className="tag-list" aria-label={`${service.title} capabilities`}>
+                  <div className="service-capabilities">
+                    <span>Core capabilities</span>
+                    <ul className="tag-list" aria-label={`${service.title} capabilities`}>
                     {service.tags.map((tag) => (
-                      <li key={tag}>{tag}</li>
+                        <li key={tag}>
+                          <i aria-hidden="true" />
+                          {tag}
+                        </li>
                     ))}
-                  </ul>
+                    </ul>
+                  </div>
                 </article>
               ))}
             </div>
